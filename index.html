@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Romantic Christmas Message</title>
+  <style>
+    body {
+      font-family: 'Arial, sans-serif';
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      background: linear-gradient(to bottom, #ff9a9e, #fad0c4);
+      color: white;
+      text-align: center;
+    }
+
+    .container {
+      position: relative;
+      z-index: 10;
+      background: rgba(0, 0, 0, 0.5);
+      border-radius: 10px;
+      padding: 20px 30px;
+      max-width: 600px;
+      margin: 20px auto;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 3rem;
+      color: #ffd700; /* Gold text color */
+      text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.8);
+    }
+
+    p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+    }
+
+    .heart {
+      font-size: 3rem;
+      color: #ff6b6b;
+      animation: beat 1s infinite ease-in-out;
+    }
+
+    @keyframes beat {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.2);
+      }
+    }
+
+    .letter-image {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .letter-image img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .footer {
+      margin-top: 20px;
+      font-size: 0.8rem;
+      opacity: 0.8;
+    }
+
+    /* Floating Hearts */
+    .heart-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: 1;
+      pointer-events: none; /* Ensure hearts don't interfere with scrolling */
+    }
+
+    .heart-bg .heart {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: #ff6b6b;
+      opacity: 0.7;
+      transform: rotate(45deg);
+      animation: float 5s infinite ease-in-out;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .heart-bg .heart::before,
+    .heart-bg .heart::after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: #ff6b6b;
+      border-radius: 50%;
+    }
+
+    .heart-bg .heart::before {
+      top: -10px;
+      left: 0;
+    }
+
+    .heart-bg .heart::after {
+      left: 10px;
+      top: 0;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(100vh) rotate(45deg);
+        opacity: 0;
+      }
+      50% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-10vh) rotate(45deg);
+        opacity: 0;
+      }
+    }
+
+    /* Snowflakes */
+    .snowflake {
+      position: fixed;
+      top: -10%;
+      color: white;
+      font-size: 1rem;
+      animation: fall 10s linear infinite;
+      z-index: 2;
+    }
+
+    @keyframes fall {
+      0% {
+        transform: translateX(0) translateY(0) rotate(0deg);
+      }
+      100% {
+        transform: translateX(50vw) translateY(100vh) rotate(360deg);
+      }
+    }
+
+    .snowflake:nth-child(odd) {
+      animation-duration: 8s;
+    }
+
+    .snowflake:nth-child(even) {
+      animation-duration: 12s;
+    }
+
+    /* Shining Stars */
+    .star {
+      position: fixed;
+      width: 5px;
+      height: 5px;
+      background-color: #fff;
+      border-radius: 50%;
+      animation: twinkle 2s infinite ease-in-out;
+      z-index: 3;
+    }
+
+    @keyframes twinkle {
+      0%, 100% {
+        opacity: 0.2;
+        transform: scale(1);
+      }
+      50% {
+        opacity: 1;
+        transform: scale(1.5);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="heart-bg">
+    <!-- Generate more hearts dynamically -->
+    <div class="heart" style="left: 5%; animation-duration: 6s;"></div>
+    <div class="heart" style="left: 15%; animation-duration: 7s; animation-delay: 1s;"></div>
+    <div class="heart" style="left: 25%; animation-duration: 8s; animation-delay: 2s;"></div>
+    <div class="heart" style="left: 35%; animation-duration: 5s; animation-delay: 3s;"></div>
+    <div class="heart" style="left: 45%; animation-duration: 6.5s; animation-delay: 1.5s;"></div>
+  </div>
+
+  <!-- Snowflakes -->
+  <div class="snowflake" style="left: 10%; animation-delay: 0s;">❄</div>
+  <div class="snowflake" style="left: 30%; animation-delay: 2s;">❄</div>
+  <div class="snowflake" style="left: 50%; animation-delay: 4s;">❄</div>
+  <div class="snowflake" style="left: 70%; animation-delay: 6s;">❄</div>
+  <div class="snowflake" style="left: 90%; animation-delay: 8s;">❄</div>
+
+  <!-- Shining Stars -->
+  <div class="star" style="top: 10%; left: 20%; animation-delay: 0s;"></div>
+  <div class="star" style="top: 20%; left: 40%; animation-delay: 1s;"></div>
+  <div class="star" style="top: 30%; left: 60%; animation-delay: 2s;"></div>
+  <div class="star" style="top: 40%; left: 80%; animation-delay: 3s;"></div>
+
+  <!-- Main Content -->
+  <div class="container">
+    <h1>Алтанзулд 🎄✨</h1>
+    <div class="heart">❤️</div>
+    <p>Forever and Always</p>
+
+    <!-- Letter Image Section -->
+    <div class="letter-image">
+      <img src="images/letter.jpg" alt="Letter Image" />
+    </div>
+
+    <div class="footer">Made with Love 😍</div>
+  </div>
+</body>
+</html>
